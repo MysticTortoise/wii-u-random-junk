@@ -32,7 +32,11 @@ include $(DEVKITPRO)/wut/share/wut_rules
 #-------------------------------------------------------------------------------
 TARGET		:=  hypergfx2test
 BUILD		:=	build
-SOURCES		:=	source/libc source
+SOURCES		:=	source/Engine \
+				source/Engine/Render \
+				 \
+			source
+
 ROMFS		:=	assets
 DATA		:=	
 INCLUDES	:=	include

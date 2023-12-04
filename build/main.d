@@ -1,4 +1,5 @@
-main.o: C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/source/main.cpp \
+main.o: \
+ C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/source/main.cpp \
  C:/devkitPro/wut/include/gfd.h C:/devkitPro/wut/include/wut.h \
  C:/devkitPro/wut/include/wut_structsize.h \
  C:/devkitPro/wut/include/wut_types.h \
@@ -27,10 +28,10 @@ main.o: C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/source/main.cpp \
  C:/devkitPro/wut/include/coreinit/exception.h \
  C:/devkitPro/wut/include/coreinit/debug.h \
  C:/devkitPro/portlibs/wiiu/include/romfs-wiiu.h \
- C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/include/camTablet.hpp \
- C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/include/datatypes.hpp \
- C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/include/TGAImport.hpp \
- C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/include/numberSwapper.hpp \
+ C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/camTablet.hpp \
+ C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/datatypes.hpp \
+ C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/TGAImport.hpp \
+ C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/numberSwapper.hpp \
  C:/devkitPro/wut/include/coreinit/memdefaultheap.h \
  C:/devkitPro/wut/include/coreinit/memheap.h \
  C:/devkitPro/wut/include/coreinit/spinlock.h \
@@ -73,10 +74,10 @@ C:/devkitPro/wut/include/coreinit/context.h:
 C:/devkitPro/wut/include/coreinit/exception.h:
 C:/devkitPro/wut/include/coreinit/debug.h:
 C:/devkitPro/portlibs/wiiu/include/romfs-wiiu.h:
-C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/include/camTablet.hpp:
-C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/include/datatypes.hpp:
-C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/include/TGAImport.hpp:
-C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/include/numberSwapper.hpp:
+C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/camTablet.hpp:
+C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/datatypes.hpp:
+C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/TGAImport.hpp:
+C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/numberSwapper.hpp:
 C:/devkitPro/wut/include/coreinit/memdefaultheap.h:
 C:/devkitPro/wut/include/coreinit/memheap.h:
 C:/devkitPro/wut/include/coreinit/spinlock.h:

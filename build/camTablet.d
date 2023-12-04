@@ -1,6 +1,6 @@
-camTablet.o: \
- C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/source/libc/camTablet.cpp \
- C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/include/camTablet.hpp \
+CamTablet.o: \
+ C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/source/Engine/Render/CamTablet.cpp \
+ C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/camTablet.hpp \
  C:/devkitPro/wut/include/whb/gfx.h C:/devkitPro/wut/include/wut.h \
  C:/devkitPro/wut/include/wut_structsize.h \
  C:/devkitPro/wut/include/wut_types.h \
@@ -13,12 +13,12 @@ camTablet.o: \
  C:/devkitPro/wut/include/gx2r/resource.h \
  C:/devkitPro/wut/include/gx2/texture.h \
  C:/devkitPro/wut/include/gx2/surface.h \
- C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/include/datatypes.hpp \
+ C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/datatypes.hpp \
  C:/devkitPro/wut/include/gx2/draw.h C:/devkitPro/wut/include/gx2/mem.h \
  C:/devkitPro/wut/include/gx2/registers.h \
  C:/devkitPro/wut/include/gx2r/draw.h \
  C:/devkitPro/wut/include/coreinit/debug.h \
- C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/include/CafeGLSLCompiler.h \
+ C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/CafeGLSLCompiler.h \
  C:/devkitPro/wut/include/coreinit/dynload.h \
  C:/devkitPro/wut/include/coreinit/thread.h \
  C:/devkitPro/wut/include/coreinit/alarm.h \
@@ -27,8 +27,8 @@ camTablet.o: \
  C:/devkitPro/wut/include/coreinit/systeminfo.h \
  C:/devkitPro/wut/include/coreinit/context.h \
  C:/devkitPro/wut/include/coreinit/exception.h \
- C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/include/TGAImport.hpp \
- C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/include/numberSwapper.hpp \
+ C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/TGAImport.hpp \
+ C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/numberSwapper.hpp \
  C:/devkitPro/wut/include/coreinit/memdefaultheap.h \
  C:/devkitPro/wut/include/coreinit/memheap.h \
  C:/devkitPro/wut/include/coreinit/spinlock.h \
@@ -42,8 +42,8 @@ camTablet.o: \
  C:/devkitPro/wut/include/whb/log.h C:/devkitPro/wut/include/whb/proc.h \
  C:/devkitPro/wut/include/gfd.h \
  C:/devkitPro/portlibs/wiiu/include/romfs-wiiu.h \
- C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/include/HelperStandard.hpp
-C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/include/camTablet.hpp:
+ C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/HelperStandard.hpp
+C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/camTablet.hpp:
 C:/devkitPro/wut/include/whb/gfx.h:
 C:/devkitPro/wut/include/wut.h:
 C:/devkitPro/wut/include/wut_structsize.h:
@@ -57,13 +57,13 @@ C:/devkitPro/wut/include/gx2r/buffer.h:
 C:/devkitPro/wut/include/gx2r/resource.h:
 C:/devkitPro/wut/include/gx2/texture.h:
 C:/devkitPro/wut/include/gx2/surface.h:
-C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/include/datatypes.hpp:
+C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/datatypes.hpp:
 C:/devkitPro/wut/include/gx2/draw.h:
 C:/devkitPro/wut/include/gx2/mem.h:
 C:/devkitPro/wut/include/gx2/registers.h:
 C:/devkitPro/wut/include/gx2r/draw.h:
 C:/devkitPro/wut/include/coreinit/debug.h:
-C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/include/CafeGLSLCompiler.h:
+C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/CafeGLSLCompiler.h:
 C:/devkitPro/wut/include/coreinit/dynload.h:
 C:/devkitPro/wut/include/coreinit/thread.h:
 C:/devkitPro/wut/include/coreinit/alarm.h:
@@ -72,8 +72,8 @@ C:/devkitPro/wut/include/coreinit/time.h:
 C:/devkitPro/wut/include/coreinit/systeminfo.h:
 C:/devkitPro/wut/include/coreinit/context.h:
 C:/devkitPro/wut/include/coreinit/exception.h:
-C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/include/TGAImport.hpp:
-C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/include/numberSwapper.hpp:
+C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/TGAImport.hpp:
+C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/numberSwapper.hpp:
 C:/devkitPro/wut/include/coreinit/memdefaultheap.h:
 C:/devkitPro/wut/include/coreinit/memheap.h:
 C:/devkitPro/wut/include/coreinit/spinlock.h:
@@ -88,4 +88,4 @@ C:/devkitPro/wut/include/whb/log.h:
 C:/devkitPro/wut/include/whb/proc.h:
 C:/devkitPro/wut/include/gfd.h:
 C:/devkitPro/portlibs/wiiu/include/romfs-wiiu.h:
-C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/include/HelperStandard.hpp:
+C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/HelperStandard.hpp:

@@ -29,55 +29,39 @@
 #include "numberSwapper.hpp"
 
 
-
-GX2Texture* s_texture = nullptr;
-GX2Sampler s_sampler = {};
-
-alignas(0x100) uint32_t s_timePSUniformBlock[4] = { };
-int64_t launchTime;
-
-
-
+// You're succeeding, Good job. :)
 
 int main(int argc, char **argv)
 {
    int result = 0;
     romfsInit();
     OSReport("main run\n");
-    // So ^^ gets run but VV doesn't... what the shit.
-    OSReport("INIT ALL SHIT\n");
    WHBLogUdpInit();
    WHBProcInit();
-   OSReport("INIT GRAPHIX\n");
    InitializeGraphics();
-   OSReport("GRAPHIX DONE DOING THINGy\n");
 
-    CamTabletRender *MainRenderer = new CamTabletRender();
-    std::vector<Sprite*> sprites{};
-    sprites.push_back(new Sprite("texture.tga"));
+    CamTabletRender MainRenderer = CamTabletRender();
+    std::vector<Sprite> tvSprites{};
+    tvSprites.push_back(Sprite("texture.tga"));
+    std::vector<Sprite> drcSprites{};
+    drcSprites.push_back(Sprite("testimage.tga"));
 
-   OSReport("OK MAIN LOOP NOW\n");
    while (WHBProcIsRunning()) {
 
         WHBGfxBeginRender();
-        OSReport("RENDER PLS\n");
 
         WHBGfxBeginRenderTV();
-        MainRenderer->Render(sprites);
+        MainRenderer.Render(tvSprites);
         WHBGfxFinishRenderTV();
-        OSReport("RENDER DRC PLS\n");
 
         WHBGfxBeginRenderDRC();
-        //MainRenderer->Render(sprites);
+        MainRenderer.Render(drcSprites);
         WHBGfxFinishRenderDRC();
-
-         OSReport("RENDER DONE PLS\n");
 
         WHBGfxFinishRender();
    }
 
    WHBLogPrintf("Exiting...");
-   delete MainRenderer;
    romfsExit();
    WHBUnmountSdCard();
    WHBGfxShutdown();
