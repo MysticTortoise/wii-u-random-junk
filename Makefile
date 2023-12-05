@@ -34,7 +34,7 @@ TARGET		:=  hypergfx2test
 BUILD		:=	build
 SOURCES		:=	source/Engine \
 				source/Engine/Render \
-				 \
+				source/Engine/Controller \
 			source
 
 ROMFS		:=	assets

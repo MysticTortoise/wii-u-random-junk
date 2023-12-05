@@ -25,6 +25,7 @@
 #include <vector>
 
 #include "camTablet.hpp"
+#include "GameInput.hpp"
 #include "TGAImport.hpp"
 #include "numberSwapper.hpp"
 
@@ -42,23 +43,34 @@ int main(int argc, char **argv)
 
     CamTabletRender MainRenderer = CamTabletRender();
     std::vector<Sprite> tvSprites{};
-    tvSprites.push_back(Sprite("texture.tga"));
+
+    Sprite tvSprite = Sprite("texture.tga");
+    tvSprites.push_back(tvSprite);
     std::vector<Sprite> drcSprites{};
     drcSprites.push_back(Sprite("testimage.tga"));
 
+    Input::WiiUGamepad mainGamepad;
+
    while (WHBProcIsRunning()) {
 
-        WHBGfxBeginRender();
+      
+      mainGamepad.processInput();
+      if(mainGamepad.buttons.at(Input::ButtonA).isPressed)
+      {
+         tvSprite.position.x += 0.01;
+      }
+      
+      WHBGfxBeginRender();
 
-        WHBGfxBeginRenderTV();
-        MainRenderer.Render(tvSprites);
-        WHBGfxFinishRenderTV();
+      WHBGfxBeginRenderTV();
+      MainRenderer.Render(tvSprites);
+      WHBGfxFinishRenderTV();
 
-        WHBGfxBeginRenderDRC();
-        MainRenderer.Render(drcSprites);
-        WHBGfxFinishRenderDRC();
+      WHBGfxBeginRenderDRC();
+      MainRenderer.Render(drcSprites);
+      WHBGfxFinishRenderDRC();
 
-        WHBGfxFinishRender();
+      WHBGfxFinishRender();
    }
 
    WHBLogPrintf("Exiting...");

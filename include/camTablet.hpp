@@ -22,10 +22,8 @@ class Camera2D;
 
 class Camera2D{
     public:
-        float x;
-        float y;
-        float width;
-        float height;
+        Vector2 position = Vector2(0,0);
+        Vector2 size = Vector2(1,1);
         float rotation;
 
         Camera2D(float x = 0, float y = 0, float w = 1, float h = 1, float r = 0);
@@ -61,10 +59,8 @@ class Sprite{
     public:
         Sprite(std::string imageFilePath);
 
-        float x = 0;
-        float y = 0;
-        float width = 1;
-        float height = 1;
+        Vector2 position = Vector2();
+        Vector2 size = Vector2(1,1);
         float rotation = 0;
     void Draw(CamTabletRender *renderer) const;
 };

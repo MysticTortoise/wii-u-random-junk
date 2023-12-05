@@ -21,11 +21,11 @@ Sprite::Sprite(std::string imageFilePath)
 
 void Sprite::Draw(CamTabletRender *renderer) const
 {
-    renderer->sPositionUniformBlock[0] = _swapF32(x - renderer->camera.x); // Position x
-    renderer->sPositionUniformBlock[1] = _swapF32(y - renderer->camera.y); // Position y
+    renderer->sPositionUniformBlock[0] = _swapF32(position.x - renderer->camera.position.x); // Position x
+    renderer->sPositionUniformBlock[1] = _swapF32(position.y - renderer->camera.position.y); // Position y
     renderer->sPositionUniformBlock[2] = _swapF32(rotation - renderer->camera.rotation); // Rotation
-    renderer->sPositionUniformBlock[3] = _swapF32(width/renderer->camera.width); // X Scale
-    renderer->sPositionUniformBlock[4] = _swapF32(height/renderer->camera.height); // Y Scale
+    renderer->sPositionUniformBlock[3] = _swapF32(size.x/renderer->camera.size.x); // X Scale
+    renderer->sPositionUniformBlock[4] = _swapF32(size.y/renderer->camera.size.y); // Y Scale
     GX2SetVertexUniformBlock(0, sizeof(renderer->sPositionUniformBlock), (void*)renderer->sPositionUniformBlock);
     GX2Invalidate((GX2InvalidateMode)(GX2_INVALIDATE_MODE_CPU | GX2_INVALIDATE_MODE_UNIFORM_BLOCK), renderer->sPositionUniformBlock, sizeof(renderer->sPositionUniformBlock));
 

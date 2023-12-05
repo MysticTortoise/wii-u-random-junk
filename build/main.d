@@ -30,6 +30,9 @@ main.o: \
  C:/devkitPro/portlibs/wiiu/include/romfs-wiiu.h \
  C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/camTablet.hpp \
  C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/datatypes.hpp \
+ C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/GameInput.hpp \
+ C:/devkitPro/wut/include/vpad/input.h \
+ C:/devkitPro/wut/include/vpadbase/base.h \
  C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/TGAImport.hpp \
  C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/numberSwapper.hpp \
  C:/devkitPro/wut/include/coreinit/memdefaultheap.h \
@@ -76,6 +79,9 @@ C:/devkitPro/wut/include/coreinit/debug.h:
 C:/devkitPro/portlibs/wiiu/include/romfs-wiiu.h:
 C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/camTablet.hpp:
 C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/datatypes.hpp:
+C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/GameInput.hpp:
+C:/devkitPro/wut/include/vpad/input.h:
+C:/devkitPro/wut/include/vpadbase/base.h:
 C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/TGAImport.hpp:
 C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/numberSwapper.hpp:
 C:/devkitPro/wut/include/coreinit/memdefaultheap.h:
