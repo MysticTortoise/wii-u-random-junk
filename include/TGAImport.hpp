@@ -69,7 +69,7 @@ inline GX2Texture* TGA_LoadTexture(uint8_t* data, uint32_t length) {
     }
 
     // todo: create texture with optimal tile format and use GX2CopySurface to convert from linear to tiled format
-    GX2Invalidate(GX2_INVALIDATE_MODE_CPU | GX2_INVALIDATE_MODE_TEXTURE, texture->surface.image, texture->surface.imageSize);
+    GX2Invalidate((GX2InvalidateMode)(GX2_INVALIDATE_MODE_CPU | GX2_INVALIDATE_MODE_TEXTURE), texture->surface.image, texture->surface.imageSize);
     return texture;
 }
 

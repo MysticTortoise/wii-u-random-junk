@@ -27,7 +27,11 @@
 #include "camTablet.hpp"
 #include "GameInput.hpp"
 #include "TGAImport.hpp"
-#include "numberSwapper.hpp"
+#include "HelperStandard.hpp"
+#include "EngineCore/Scene.hpp"
+#include "MainRendererComponent.hpp"
+#include "SpriteComponent.hpp"
+#include "TransformComponent.hpp"
 
 
 // You're succeeding, Good job. :)
@@ -41,36 +45,35 @@ int main(int argc, char **argv)
    WHBProcInit();
    InitializeGraphics();
 
-    CamTabletRender MainRenderer = CamTabletRender();
-    std::vector<Sprite> tvSprites{};
+   
+   GameScene* testScene = new GameScene();
+   GameObject* mainRenderObject = testScene->CreateGameobject();
+   print("OK graphix");
+   MainRendererComponent* mainRenderComp = (MainRendererComponent*)mainRenderObject->AddComponent<MainRendererComponent>();
+   Camera2DComponent* cameraComp = (Camera2DComponent*)mainRenderObject->AddComponent<Camera2DComponent>();
+   mainRenderComp->camera = (Camera2DComponent*)mainRenderObject->GetComponent<Camera2DComponent>();
 
-    Sprite tvSprite = Sprite("texture.tga");
-    tvSprites.push_back(tvSprite);
-    std::vector<Sprite> drcSprites{};
-    drcSprites.push_back(Sprite("testimage.tga"));
+   GameObject* spriteObject = testScene->CreateGameobject();
+   print("OK sprites");
+   SpriteComponent* spriteComp = new SpriteComponent("texture.tga");
+   spriteObject->AddComponent(spriteComp);
+   spriteComp->linkedRenderer = mainRenderComp;
+   print("shit penis fuck.");
 
-    Input::WiiUGamepad mainGamepad;
+   TransformComponent* spriteObjectTransform = (TransformComponent*)spriteObject->GetComponent<TransformComponent>();
+   spriteObjectTransform->position = Vector2(0,0);
+   spriteObjectTransform->size = Vector2(1,1);
+
+   TransformComponent* camObjectTransform = (TransformComponent*)mainRenderObject->GetComponent<TransformComponent>();
+   camObjectTransform->position = Vector2(0,0);
+   camObjectTransform->size = Vector2(1,1);
+   
+   print("Ok Draw");
 
    while (WHBProcIsRunning()) {
 
-      
-      mainGamepad.processInput();
-      if(mainGamepad.buttons.at(Input::ButtonA).isPressed)
-      {
-         tvSprite.position.x += 0.01;
-      }
-      
-      WHBGfxBeginRender();
+      testScene->Draw();
 
-      WHBGfxBeginRenderTV();
-      MainRenderer.Render(tvSprites);
-      WHBGfxFinishRenderTV();
-
-      WHBGfxBeginRenderDRC();
-      MainRenderer.Render(drcSprites);
-      WHBGfxFinishRenderDRC();
-
-      WHBGfxFinishRender();
    }
 
    WHBLogPrintf("Exiting...");

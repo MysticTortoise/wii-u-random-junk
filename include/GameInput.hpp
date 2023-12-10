@@ -80,7 +80,7 @@ class Controller{ // Base class for all controller types.
         std::map<AxisInputType,AxisInput2D> axes;
 
 
-        virtual void processInput();
+        virtual void processInput() {};
 };
 
 

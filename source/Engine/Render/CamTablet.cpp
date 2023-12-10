@@ -8,6 +8,7 @@
 #include <string>
 #include <vector>
 #include <array>
+#include <map>
 // Wii U libs
 #include <whb/gfx.h>
 
@@ -82,8 +83,6 @@ CamTabletRender::CamTabletRender()
     memcpy(coordsUploadBuffer, sprite_TexCoord_Base, s_texCoordBuffer.elemSize * s_texCoordBuffer.elemCount);
     GX2RUnlockBufferEx(&s_texCoordBuffer, GX2R_RESOURCE_BIND_NONE);
 
-
-
     camera = Camera2D();
 }
 
@@ -93,24 +92,11 @@ CamTabletRender::~CamTabletRender()
     GX2RDestroyBufferEx(&s_texCoordBuffer, GX2R_RESOURCE_BIND_NONE);
 }
 
-void CamTabletRender::Render(const std::vector<Sprite> &sprites)
+void CamTabletRender::Render(const std::vector<Sprite*>& sprites)
 {
 
-    WHBGfxClearColor(clearColor.r, clearColor.g, clearColor.b, 1.0f);
-
-    GX2SetFetchShader(&(group.fetchShader));
-    GX2SetVertexShader(group.vertexShader);
-    GX2SetPixelShader(group.pixelShader);
-    GX2SetShaderMode(GX2_SHADER_MODE_UNIFORM_BLOCK);
-
-    GX2RSetAttributeBuffer(&s_positionBuffer, 0, s_positionBuffer.elemSize, 0);
-    GX2RSetAttributeBuffer(&s_texCoordBuffer, 1, s_texCoordBuffer.elemSize, 0);
-
-    int spriteCount = sprites.size();
-
-    for (Sprite const sprite : sprites)
+    for (Sprite* const sprite : sprites)
     {
-        sprite.Draw(this);
+        sprite->Draw(this);
     }
 }
-

@@ -44,7 +44,15 @@ main.o: \
  C:/devkitPro/wut/include/sysapp/args.h \
  C:/devkitPro/wut/include/sysapp/switch.h \
  C:/devkitPro/wut/include/nn/ffl/miidata.h \
- C:/devkitPro/wut/include/whb/log_cafe.h
+ C:/devkitPro/wut/include/whb/log_cafe.h \
+ C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/HelperStandard.hpp \
+ C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/EngineCore/Scene.hpp \
+ C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/EngineCore/GameObject.hpp \
+ C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/Render/RenderHelper.hpp \
+ C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/EngineCore/Components/Rendering/MainRendererComponent.hpp \
+ C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/EngineCore/Components/Rendering/Camera2D.hpp \
+ C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/EngineCore/Components/Rendering/SpriteComponent.hpp \
+ C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/EngineCore/Components/TransformComponent.hpp
 C:/devkitPro/wut/include/gfd.h:
 C:/devkitPro/wut/include/wut.h:
 C:/devkitPro/wut/include/wut_structsize.h:
@@ -94,3 +102,11 @@ C:/devkitPro/wut/include/sysapp/args.h:
 C:/devkitPro/wut/include/sysapp/switch.h:
 C:/devkitPro/wut/include/nn/ffl/miidata.h:
 C:/devkitPro/wut/include/whb/log_cafe.h:
+C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/HelperStandard.hpp:
+C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/EngineCore/Scene.hpp:
+C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/EngineCore/GameObject.hpp:
+C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/Render/RenderHelper.hpp:
+C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/EngineCore/Components/Rendering/MainRendererComponent.hpp:
+C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/EngineCore/Components/Rendering/Camera2D.hpp:
+C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/EngineCore/Components/Rendering/SpriteComponent.hpp:
+C:/Users/Denis/OneDrive/Documents/WIIU/GFX2/wii-u-random-junk/include/EngineCore/Components/TransformComponent.hpp:
