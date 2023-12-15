@@ -31,7 +31,7 @@ void GameScene::Draw(){
         }
     }
     std::sort(sortedComponents.begin(),sortedComponents.end(),sortComponentsByRenderPriority);
-
+    
     WHBGfxBeginRender();
 
     WHBGfxBeginRenderTV();
@@ -44,7 +44,7 @@ void GameScene::Draw(){
     for(GameObjectComponent* component : sortedComponents){
         component->Draw(DRAW_SCREEN_DRC);
     }
-    WHBGfxFinishRender();
+    WHBGfxFinishRenderDRC();
 
     WHBGfxFinishRender();
 }

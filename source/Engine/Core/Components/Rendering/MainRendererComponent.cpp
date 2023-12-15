@@ -66,7 +66,7 @@ MainRendererComponent::MainRendererComponent(){
 
 void MainRendererComponent::Draw(DRAW_SCREEN_TYPE drawScreenType){
     print("MainRenderBegin");
-    WHBGfxClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    WHBGfxClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 
     GX2SetFetchShader(&(group.fetchShader));
     GX2SetVertexShader(group.vertexShader);

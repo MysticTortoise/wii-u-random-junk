@@ -23,7 +23,7 @@ class MainRendererComponent : public GameObjectComponent{
     RENDER_PRIORITY renderPriority = RENDER_PRIORITY_SETUP;
     DRAW_SCREEN_TYPE drawScreenType = DRAW_SCREEN_TV;
 
-    Camera2DComponent* camera;
+    Camera2DComponent* camera = nullptr;
 
     void Draw(DRAW_SCREEN_TYPE drawScreenType);
     void SetImageToDraw(GX2Texture* texture, GX2Sampler* sampler);

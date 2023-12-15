@@ -11,6 +11,7 @@
 #include "HelperStandard.hpp"
 
 SpriteComponent::SpriteComponent(std::string imageFilePath){
+    sampler = new GX2Sampler();
     print("time to load sprite");
     std::ifstream fs("romfs:/" + imageFilePath, std::ios::in | std::ios::binary);
     print("file opens good");
@@ -18,6 +19,8 @@ SpriteComponent::SpriteComponent(std::string imageFilePath){
     print("data read fine");
     texture = TGA_LoadTexture((uint8_t *)data.data(), data.size());
     print("texture loaded good. it's the sampelr aint it. fuck you sampler.");
+
+    
 
     GX2InitSampler(sampler, GX2_TEX_CLAMP_MODE_CLAMP, GX2_TEX_XY_FILTER_MODE_LINEAR);
     print("so wait the sampler worked fine??? what the fuck???");

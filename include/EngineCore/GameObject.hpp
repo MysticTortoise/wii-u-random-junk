@@ -17,7 +17,7 @@ class GameObjectComponent;
 
 class GameObjectComponent{
     public:
-    GameObject* owner; // A pointer to the Component's GameObject.
+    GameObject* owner = nullptr; // A pointer to the Component's GameObject.
     RENDER_PRIORITY renderPriority = RENDER_PRIORITY_STANDARD;
 
     virtual void Start() {}; // Called at the beginning of a scene.
@@ -29,10 +29,10 @@ class GameObjectComponent{
 
 class GameObject{
     public:
-    std::string name; // The name of the GameObject
-    uint64_t id; // The GameObject's unique ID.
+    std::string name = ""; // The name of the GameObject
+    uint64_t id = 0; // The GameObject's unique ID.
 
-    std::vector<GameObjectComponent*> components; // A list of pointers to the GameObject's components.
+    std::vector<GameObjectComponent*> components = {}; // A list of pointers to the GameObject's components.
 
     GameObject();
 

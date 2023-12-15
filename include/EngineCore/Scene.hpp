@@ -6,7 +6,7 @@
 
 class GameScene{
     public:
-    std::vector<GameObject*> GameObjects; // All of the GameObjects in the scene.
+    std::vector<GameObject*> GameObjects = {}; // All of the GameObjects in the scene.
 
     GameObject* CreateGameobject();
 
