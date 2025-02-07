@@ -21,7 +21,19 @@
                 }
             ]
         },
-        
+        {
+            "Name" : "TestSprite",
+            "Position":{"x":640,"y":700},
+            "Size":{"x":1280,"y":720},
+            "Components":
+            [
+                {
+                    "Class" : "SpriteComponent",
+                    "Sprite": "testimage.tga",
+                    "LinkedRenderer": "RenderObj"
+                }
+            ]
+        },
         {
             "Name" : "TestSprite2",
             "Position":{"x":640,"y":360},
@@ -38,19 +50,6 @@
                         ]}
                     ],
                     "Alpha":128
-                }
-            ]
-        },
-        {
-            "Name" : "TestSprite",
-            "Position":{"x":640,"y":700},
-            "Size":{"x":1280,"y":720},
-            "Components":
-            [
-                {
-                    "Class" : "SpriteComponent",
-                    "Sprite": "testimage.tga",
-                    "LinkedRenderer": "RenderObj"
                 }
             ]
         }
