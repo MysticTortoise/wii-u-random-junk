@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Scene.hpp"
 #include "GameObject.hpp"
 #include "datatypes.hpp"
 
@@ -14,10 +15,18 @@ class SpriteComponent : public GameObjectComponent{
         
         SpriteComponent(std::string imageFilePath);
         SpriteComponent(GX2Texture texture);
+        static SpriteComponent* SpriteComponentFromJSON(GameScene* scene, JSON* jsonData);
+
+        ~SpriteComponent();
 
         alignas(0x100) uint32_t sPositionUniformBlock[8] = {};
-
         MainRendererComponent* linkedRenderer = nullptr;
 
+        bool visible = true;
+        uint8_t alpha = 255;
+
         void Draw(DRAW_SCREEN_TYPE drawScreenType);
+
+
+        static GameObjectComponent* CreateFromString(std::string data);
 };

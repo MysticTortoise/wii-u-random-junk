@@ -1,0 +1,58 @@
+{
+    "Name" : "TESTSCENE",
+    "Objects": [
+        {
+            "Name" : "RenderObj",
+            "Position":{"x":640,"y":360},
+            "Size":{"x":1280,"y":720},
+            "Components":
+            [
+                {
+                    "Class" : "MainRenderComponent"
+                },
+                {
+                    "Class" : "CameraComponent",
+                    "BGColor" : {
+                        "x" : 0.0,
+                        "y" : 1.0,
+                        "z" : 0.0,
+                        "w" : 1.0
+                    }
+                }
+            ]
+        },
+        
+        {
+            "Name" : "TestSprite2",
+            "Position":{"x":640,"y":360},
+            "Size":{"x":1280,"y":720},
+            "Components":
+            [
+                {
+                    "Class" : "AnimatedSpriteComponent",
+                    "LinkedRenderer": "RenderObj",
+                    "Animations": [
+                        {"Name":"TestAnim","Speed":0.01,"Frames":[
+                            "testimage.tga",
+                            "texture.tga"
+                        ]}
+                    ],
+                    "Alpha":128
+                }
+            ]
+        },
+        {
+            "Name" : "TestSprite",
+            "Position":{"x":640,"y":700},
+            "Size":{"x":1280,"y":720},
+            "Components":
+            [
+                {
+                    "Class" : "SpriteComponent",
+                    "Sprite": "testimage.tga",
+                    "LinkedRenderer": "RenderObj"
+                }
+            ]
+        }
+    ]
+}

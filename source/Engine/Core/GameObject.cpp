@@ -9,6 +9,12 @@ GameObject::GameObject(){
     AddComponent(transform);
 }
 
+GameObject::GameObject(std::vector<GameObjectComponent*> components){
+    for(GameObjectComponent* component : components){
+        this->components.push_back(component);
+    }
+}
+
 void GameObject::Start(){
     for(GameObjectComponent* component : components){
         component->Start();
@@ -17,6 +23,11 @@ void GameObject::Start(){
 void GameObject::Update(){
     for(GameObjectComponent* component : components){
         component->Update();
+    }
+}
+void GameObject::Exit(){
+    for(GameObjectComponent* component : components){
+        component->Exit();
     }
 }
 

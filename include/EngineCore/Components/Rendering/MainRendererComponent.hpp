@@ -25,8 +25,11 @@ class MainRendererComponent : public GameObjectComponent{
 
     Camera2DComponent* camera = nullptr;
 
+    void Start();
     void Draw(DRAW_SCREEN_TYPE drawScreenType);
+
     void SetImageToDraw(GX2Texture* texture, GX2Sampler* sampler);
+    void SetBlendModeBasic();
     
     MainRendererComponent();
 };

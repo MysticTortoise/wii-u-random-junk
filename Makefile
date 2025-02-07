@@ -32,10 +32,10 @@ include $(DEVKITPRO)/wut/share/wut_rules
 #-------------------------------------------------------------------------------
 TARGET		:=  hypergfx2test
 BUILD		:=	build
-SOURCES		:=	source/Engine source/Engine/Controller source/Engine/Core source/Engine/Core/Components source/Engine/Core/Components/Rendering source/Engine/Render source/extlibs source
+SOURCES		:=	source/Engine source/Engine/Controller source/Engine/Core source/Engine/Core/Components source/Engine/Core/Components/Controllers source/Engine/Core/Components/Rendering source/Engine/Render source/extlibs source/GameData source/GameData/Scenes source/GameData/Scripts source/GameData/Scripts/Disclamer source
 ROMFS		:=	assets
 DATA		:=	
-INCLUDES	:=	include/EngineCore include/EngineCore/Components include/EngineCore/Components/Rendering include/Render include
+INCLUDES	:=	include/EngineCore include/EngineCore/Components include/EngineCore/Components/Controllers include/EngineCore/Components/Rendering include/GameData include/GameData/EngineObjects include/GameData/Scripts include/GameData/Scripts/Disclaimer include/Libs include/Render include
 CONTENT		:=
 ICON		:=
 TV_SPLASH	:=

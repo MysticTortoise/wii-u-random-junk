@@ -1,0 +1,42 @@
+{
+    "Name" : "TitleScreen",
+    "Objects": [
+        {
+            "Name" : "RenderObj",
+            "Position":{"x":640,"y":360},
+            "Size":{"x":1280,"y":720},
+            "Components":
+            [
+                {
+                    "Class" : "MainRenderComponent"
+                },
+                {
+                    "Class" : "CameraComponent",
+                    "BGColor" : {
+                        "x" : 0.0,
+                        "y" : 0.0,
+                        "z" : 0.0,
+                        "w" : 1.0
+                    }
+                }
+            ]
+        },
+        {
+            "Name" : "FreddyBG",
+            "Position":{"x":640,"y":360},
+            "Size":{"x":1280,"y":720},
+            "Components":
+            [
+                {
+                    "Class" : "AnimatedSpriteComponent",
+                    "LinkedRenderer": "RenderObj",
+                    "Animations": [
+                        {"Name":"Default","Speed":0.01,"Frames":[
+                            "TitleScreen/FreddyBG/freddy1.tga"
+                        ]}
+                    ]
+                }
+            ]
+        }
+    ]
+}

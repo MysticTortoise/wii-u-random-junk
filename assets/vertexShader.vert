@@ -10,9 +10,12 @@ layout(binding = 0) uniform uTransformData
     float uf_rot;
     float uf_sx;
     float uf_sy;
+    float uf_alpha;
+    float uf_z;
 };
 
 layout(location = 0) out vec2 TexCoord;
+layout(location = 1) out float Alpha;
 
 void main()
 {
@@ -33,5 +36,8 @@ void main()
     transformedPos *= vec2(uf_sx,uf_sy);
 
     TexCoord = aTexCoord;
-    gl_Position = vec4(transformedPos.x, transformedPos.y, 0.0f, 1.0f);
+    gl_Position = vec4(transformedPos.x, transformedPos.y, uf_z, 1.0f);
+
+
+    Alpha = uf_alpha;
 }

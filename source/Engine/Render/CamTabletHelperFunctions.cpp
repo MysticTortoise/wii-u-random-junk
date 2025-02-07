@@ -5,6 +5,7 @@
 #include <fstream>
 
 #include "coreinit/debug.h"
+#include "gx2/registers.h"
 
 #include "CafeGLSLCompiler.h"
 
@@ -19,6 +20,8 @@ int InitializeGraphics()
     {
         return -1;
     }
+
+
 
     return 1;
 }
